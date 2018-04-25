@@ -1,4 +1,5 @@
 import React from "react"
+//import {Switch} from "react-router"
 import {BrowserRouter as Router,Route,Switch,Redirect} from "react-router-dom"
 import Home from "../components/Home"
 import Search from "../components/Search"
@@ -7,9 +8,10 @@ const router = (
 	<Router>
 		<App>
 			<Switch>
-				<Route path="/" component={Home}/>
+
+				<Route path="/home" component={Home}/>
 				<Route path="/search/:data" component={Search}/>
-				<Route path="*" to="/"/>
+                <Route path="*" to="/home"/>
 			</Switch>
 		</App>
 	</Router>
